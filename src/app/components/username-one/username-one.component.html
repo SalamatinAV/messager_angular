@@ -1,0 +1,49 @@
+<div class="conteiner">
+  <div #messageContainer class="text-message">
+    <div *ngFor="let mess of messagesOne">
+      <div class="sent-message" *ngIf="mess.messageUserOne">
+        <p class="sent">
+          {{ mess.messageUserOne }}
+          <span class="time-message-sent">{{
+            mess.data | date : "HH.mm"
+          }}</span>
+        </p>
+      </div>
+
+      <div class="received-message" *ngIf="mess.messageUserTwo">
+        <p class="received">
+          <span class="time-message-received">{{
+            mess.data | date : "HH.mm"
+          }}</span>
+          {{ mess.messageUserTwo }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-message">
+    <p style="position: absolute; color: yellow; margin: 0" *ngIf="isUserType">
+      Набирает сообщение...
+    </p>
+    <div class="form">
+      <div>
+        <textarea
+          spellcheck
+          name=""
+          id=""
+          cols="40"
+          rows="4"
+          [(ngModel)]="messegeOne"
+          (ngModelChange)="userType($event)"
+        ></textarea>
+      </div>
+      <div>
+        <mat-icon>
+          <span class="material-symbols-outlined" (click)="addMessageOne()">
+            mark_as_unread
+          </span>
+        </mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

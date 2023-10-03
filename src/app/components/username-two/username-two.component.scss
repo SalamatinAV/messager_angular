@@ -1,0 +1,91 @@
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 750px;
+  border-radius: 25px;
+  border: 3px solid black;
+  overflow: hidden;
+
+  .text-message {
+    background-color: rgb(31 241 248 / 53%);
+    height: 75%;
+    padding: 15px;
+    overflow: auto;
+
+    .sent-message {
+      display: flex;
+      justify-content: flex-end;
+      .sent {
+        position: relative;
+        margin: 2px;
+        padding: 5px;
+        max-width: 60%;
+        border: 2px solid black;
+        border-radius: 8px 8px 0 8px;
+        background-color: rgba(179, 241, 243, 0.849);
+        display: flex;
+        align-items: center;
+        .time-message-sent {
+          position: absolute;
+          left: -40px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .received-message {
+      display: flex;
+      justify-content: flex-start;
+
+      .received {
+        position: relative;
+        margin: 2px;
+        padding: 5px;
+        max-width: 60%;
+        border: 2px solid black;
+        border-radius: 8px 8px 8px 0;
+        background-color: rgba(179, 241, 243, 0.849);
+        display: flex;
+        align-items: center;
+
+        .time-message-received {
+          position: absolute;
+          right: -40px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .form-message {
+    height: 25%;
+    background-color: orange;
+
+    .form {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(15, 15, 15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    textarea {
+      margin-right: 20px;
+      padding: 15px;
+      resize: none;
+      border-radius: 8px;
+      overflow: visible;
+      border: 3px solid black;
+    }
+
+    .mat-icon {
+      height: 45px;
+      width: 45px;
+      font-size: 45px;
+      color: white;
+    }
+    :hover.mat-icon {
+      color: yellow;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(./assets/img/messager.jpeg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.received-message {
+  opacity: 0;
+  animation: ani 1s forwards;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+button {
+  background-color: rgba(240, 248, 255, 0);
+}
+
+*::-webkit-scrollbar {
+  width: 2px; /* width of the entire scrollbar */
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: yellow; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: black; /* color of the scroll thumb */
+  // border: 1px solid yellow;
+}
